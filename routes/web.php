@@ -13,14 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
-Route::get('/about',function(){
-    return view('about');
-});
-Route::get('/contact',function(){
-    return view('contact');
-});
+// Route::get('/about',function(){
+//     return view('about');
+// });
+// Route::get('/contact',function(){
+//     return view('about');
+// });
+Route::get('/', 'homeController@Home');
 
+Route::get('/about','homeController@About');
+
+
+Route::get('/contact','homeController@Contact');
